@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { CardType } from "./card";
-import Link from "next/link";
+
 
 interface CartProps {
   items: CardType[];
@@ -17,18 +17,18 @@ export const Cart = (props: CartProps): React.ReactNode => {
         const existing = map.get(item.productCode)!;
         map.set(item.productCode, {
           ...existing,
-          quantity: existing.quantity + item.quantity,
+          quantity: existing.quantity as number + (item.quantity as number),
         });
       } else {
         map.set(item.productCode, { ...item });
       }
     }
     // Remove items with quantity <= 0
-    return Array.from(map.values()).filter(item => item.quantity > 0);
+    return Array.from(map.values()).filter(item => (item.quantity as number) > 0);
   };
 
   const groupedItems = getGroupedItems();
-  const totalItemCount = groupedItems.reduce((acc, item) => acc + item.quantity, 0);
+  const totalItemCount = groupedItems.reduce((acc, item) => acc + (item.quantity as number), 0);
 
   const handleRemove = (productCode: string) => {
     props.setItems((prevItems) =>
@@ -70,17 +70,18 @@ export const Cart = (props: CartProps): React.ReactNode => {
       <div className="text-lg font-semibold text-gray-800">
         Total: ₹
         {groupedItems
-          .reduce((acc, item) => acc + item.productPrice * item.quantity, 0)
+          .reduce((acc, item) => acc + item.productPrice * (item.quantity as number), 0)
           .toFixed(2)}
       </div>
       <button
         className="bg-green-600 hover:bg-green-700 text-white text-lg font-bold py-2 px-4 rounded-md w-full"
         onClick={() =>{
         {  alert("Order confirmed!")}
+        window.location.href = "/";
           
  } } 
       >
-       <a href="/">Confirm Order</a>
+      Confirm Order
       </button>
     </div>
 
@@ -100,13 +101,13 @@ export const Cart = (props: CartProps): React.ReactNode => {
                 <li className="text-[#c73b0f]">{item.quantity}x</li>
                 <li>@₹{item.productPrice.toFixed(2)}</li>
                 <li className="text-green-500 font-semibold">
-                  ₹{(item.productPrice * item.quantity).toFixed(2)}
+                  ${(item.productPrice * (item.quantity as number)).toFixed(2)}
                 </li>
               </ul>
             </div>
           </div>
           <button
-            className="text-red-500 font-bold text-lg hover:scale-110 transition"
+            className="text-red-500 font-bold text-lg hover:scale-110 transition cursor-pointer"
             title="Remove from cart"
             onClick={() => handleRemove(item.productCode)}
           >
