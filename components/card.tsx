@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { GiShoppingCart } from "react-icons/gi";
 
 // Type for product/card
 export interface CardType {
@@ -67,9 +68,9 @@ export const Card = (props: CardProps): React.ReactNode => {
       {/* Cart control */}
       <div className="cart w-[70%] rounded-4xl relative bottom-8 left-8 text-center h-14 flex">
         {count === 0 ? (
-          <div className="flex justify-evenly items-center w-full h-full font-bold cursor-pointer border-2 rounded-4xl bg-white border-slate-500 hover:border-[#c73b0f]">
-            +
-            <button onClick={handleAddToCart}>Add to cart</button>
+          <div className="flex justify-evenly items-center w-full h-full font-bold cursor-pointer border-2 rounded-4xl bg-white border-slate-500 hover:border-[#c73b0f]  " onClick={handleAddToCart}>
+<GiShoppingCart />
+            <button className="cursor-pointer" >Add to cart</button>
           </div>
         ) : (
           <div className="flex rounded-4xl border-2 border-slate-300 hover:border-[#c73b0f] justify-around items-center w-full h-full text-white bg-[#c73b0f]">
@@ -104,6 +105,7 @@ export const Card = (props: CardProps): React.ReactNode => {
       {/* Product details */}
       <ul className="details list-none flex justify-center items-start flex-col px-2">
         <li className="text-slate-500 text-sm">{props.productName}</li>
+        <li className="text-xs text-gray-500">Code: {props.productCode}</li>
         <li className="font-bold text-md">{props.productDescrptions}</li>
         <li className="text-[#c73b0f] font-semibold">${props.productPrice}</li>
       </ul>
