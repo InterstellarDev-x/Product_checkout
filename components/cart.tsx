@@ -23,7 +23,7 @@ export const Cart = (props: CartProps): React.ReactNode => {
         map.set(item.productCode, { ...item });
       }
     }
-    // Remove items with quantity <= 0
+
     return Array.from(map.values()).filter(item => (item.quantity as number) > 0);
   };
 
@@ -51,7 +51,7 @@ export const Cart = (props: CartProps): React.ReactNode => {
             height={300}
             width={300}
           />
-          <p className="text-center text-slate-500 mt-2">Your cart is empty </p>
+          <p className="text-center text-slate-500 mt-2">Your cart is empty. </p>
         </div>
       )}
 
@@ -85,7 +85,7 @@ export const Cart = (props: CartProps): React.ReactNode => {
       </button>
     </div>
 
-    {/* Cart Items List */}
+
     <div className="cartItems space-y-4">
       {groupedItems.map((item) => (
         <div

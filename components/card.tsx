@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { GiShoppingCart } from "react-icons/gi";
 
-// Type for product/card
+
 export interface CardType {
   imageLink: string;
   productName: string;
@@ -14,12 +14,12 @@ export interface CardType {
   quantity?: number;
 }
 
-// Props for Card component
+
 interface CardProps extends CardType {
   onAddToCart: (item: CardType) => void;
 }
 
-// Card component
+
 export const Card = (props: CardProps): React.ReactNode => {
   const [count, setCount] = useState<number>(0);
 
@@ -65,7 +65,7 @@ export const Card = (props: CardProps): React.ReactNode => {
         />
       </div>
 
-      {/* Cart control */}
+
       <div className="cart w-[70%] rounded-4xl relative bottom-8 left-8 text-center h-14 flex">
         {count === 0 ? (
           <div className="flex justify-evenly items-center w-full h-full font-bold cursor-pointer border-2 rounded-4xl bg-white border-slate-500 hover:border-[#c73b0f]  " onClick={handleAddToCart}>
@@ -102,7 +102,7 @@ export const Card = (props: CardProps): React.ReactNode => {
         )}
       </div>
 
-      {/* Product details */}
+
       <ul className="details list-none flex justify-center items-start flex-col px-2">
         <li className="text-slate-500 text-sm">{props.productName}</li>
         <li className="text-xs text-gray-500">Code: {props.productCode}</li>

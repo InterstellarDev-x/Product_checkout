@@ -45,22 +45,28 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* Main Layout */}
+
       <div className="grid grid-cols-12 bg-[#fcf8f5] w-full pt-30 px-6 gap-4 ">
-        {/* Product Section */}
+
         <div className="col-span-12 lg:col-span-8 pl-6 ">
-          <div className="searchbarcomponent mb-4 text-lg font-semibold text-slate-600 flex justify-around">
-            <input
-              type="text"
-              value={searchCode}
-              onChange={(e) => setSearchCode(e.target.value)}
-              className="rounded-3xl h-12 w-[50%] border-2 px-4 border-slate-500"
-              placeholder="Enter Product ID (e.g., EAT002)"
-            />
-            <Button name="Grocery" />
-            <Button name={`Fashion`}  />
-            <Button name="Electronics" />
-          </div>
+          <div className="searchbarcomponent mb-4 text-lg font-semibold text-slate-600 flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
+  
+
+  <div className="flex flex-wrap justify-center gap-3 order-1 sm:order-none">
+    <Button name="Grocery" />
+    <Button name="Fashion" />
+    <Button name="Electronics" />
+  </div>
+
+
+  <input
+    type="text"
+    value={searchCode}
+    onChange={(e) => setSearchCode(e.target.value)}
+    className="rounded-3xl h-12 w-full sm:w-[50%] border-2 px-4 border-slate-500 order-2 sm:order-none"
+    placeholder="Enter Product ID (e.g., EAT002)"
+  />
+</div>
           <h1 className="text-black font-bold text-3xl p-2">Available Products</h1>
           {filteredCards.length === 0 ? (
             <p className="text-center text-slate-500 text-lg py-10">Product not available</p>

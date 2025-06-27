@@ -65,87 +65,74 @@ export const cards: Card[] = [
     productDescrptions: "Comfortable and stylish sneakers."
   },
   {
-    imageLink: "https://source.unsplash.com/featured/?tshirt",
+    imageLink: "https://images.unsplash.com/photo-1633966887768-64f9a867bdba?q=80&w=503&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     productName: "Graphic T-Shirt",
     productCode: "CL456",
     productPrice: 25,
     productDescrptions: "Cotton tee with cool designs."
   },
   {
-    imageLink: "https://source.unsplash.com/featured/?coffee",
+    imageLink: "https://images.unsplash.com/photo-1672570050756-4f1953bde478?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     productName: "Arabica Coffee Beans",
     productCode: "FD789",
     productPrice: 18,
     productDescrptions: "Freshly roasted premium coffee."
   },
   {
-    imageLink: "https://source.unsplash.com/featured/?keyboard",
+    imageLink: "https://images.unsplash.com/photo-1595044426077-d36d9236d54a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     productName: "Mechanical Keyboard",
     productCode: "ACC101",
     productPrice: 89,
     productDescrptions: "RGB backlit with tactile switches."
   },
   {
-    imageLink: "https://source.unsplash.com/featured/?mouse",
+    imageLink: "https://media.istockphoto.com/id/160107635/photo/blue-tech.webp?a=1&s=612x612&w=0&k=20&c=FUrsHRKR6sWFeVbI4Xy0rUFt192dw_deT-fnMmG9_pQ=",
     productName: "Wireless Mouse",
     productCode: "ACC102",
     productPrice: 40,
     productDescrptions: "Ergonomic and battery-efficient."
   },
   {
-    imageLink: "https://source.unsplash.com/featured/?camera",
+    imageLink: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     productName: "Mirrorless Camera",
     productCode: "CAM103",
     productPrice: 850,
     productDescrptions: "High-resolution compact camera."
   },
+  
   {
-    imageLink: "https://source.unsplash.com/featured/?sunglasses",
-    productName: "Ray-Ban Sunglasses",
-    productCode: "SUN104",
-    productPrice: 99,
-    productDescrptions: "UV-protected premium shades."
-  },
-  {
-    imageLink: "https://source.unsplash.com/featured/?backpack",
+    imageLink: "https://images.unsplash.com/photo-1681334921914-df210bc8083a?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     productName: "Travel Backpack",
     productCode: "BG105",
     productPrice: 60,
     productDescrptions: "Waterproof with laptop compartment."
   },
   {
-    imageLink: "https://source.unsplash.com/featured/?perfume",
+    imageLink: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     productName: "Versace Perfume",
     productCode: "PF106",
     productPrice: 75,
     productDescrptions: "Long-lasting and fresh fragrance."
   },
   {
-    imageLink: "https://source.unsplash.com/featured/?lamp",
+    imageLink: "https://plus.unsplash.com/premium_photo-1668005190411-1042cd38522e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     productName: "Desk Lamp",
     productCode: "HM107",
     productPrice: 35,
     productDescrptions: "LED lamp with adjustable brightness."
   },
   {
-    imageLink: "https://source.unsplash.com/featured/?bottle",
+    imageLink: "https://images.unsplash.com/photo-1544003484-3cd181d17917?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     productName: "Stainless Water Bottle",
     productCode: "BT108",
     productPrice: 15,
     productDescrptions: "Keeps water cold for 24 hours."
   },
   {
-    imageLink: "https://source.unsplash.com/featured/?notebook",
+    imageLink: "https://images.unsplash.com/photo-1516414447565-b14be0adf13e?q=80&w=773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     productName: "Classic Notebook",
     productCode: "ST109",
     productPrice: 10,
     productDescrptions: "Perfect for journaling and notes."
-  },
-  {
-    imageLink: "https://source.unsplash.com/featured/?earbuds",
-    productName: "Bluetooth Earbuds",
-    productCode: "EB110",
-    productPrice: 59,
-    productDescrptions: "Compact with great battery life."
   }
 ];

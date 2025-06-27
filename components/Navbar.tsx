@@ -2,28 +2,16 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+
 import { FaBars } from "react-icons/fa";
 
 export const Navbar = () => {
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 100], [1, 0.1]);
 
-  const [selected, setSelected] = useState("");
 
-  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = e.target.value;
-    setSelected(value);
 
-    // You can handle navigation logic here
-    if (value === "home") {
-      // route to home
-    } else if (value === "orders") {
-      // route to orders
-    } else if (value === "logout") {
-      // route to logout
-    }
-  };
+  
 
   return (
     <div className="w-full flex justify-center items-center z-50 transition-all duration-300 fixed">
@@ -50,8 +38,7 @@ export const Navbar = () => {
         <div className="md:hidden flex items-center gap-2">
           <FaBars className="text-white text-xl" />
           <select
-            onChange={handleSelectChange}
-            value={selected}
+            
             className="bg-white text-[#c73b0f] font-semibold rounded px-2 py-1 text-sm"
           >
             <option value="">Menu</option>
