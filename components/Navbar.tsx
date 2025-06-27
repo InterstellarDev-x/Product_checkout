@@ -23,7 +23,7 @@ export const Navbar = () => {
       }}
 
       transition={{
-        duration : .1,
+        duration : .05,
         ease : "easeInOut"
       }}
         className={`w-[90%] h-14 rounded-2xl m-2 py-2 px-4 transition-all duration-300 bg-[#c73b0f] flex items-center `}
